@@ -8,7 +8,7 @@ from rosi.items import RosiItem
 class Rosmm8picSpider(scrapy.Spider):
     name = 'rosmm8pic'
     allowed_domains = ['rosmm8.com']
-    start_urls = ['http://rosmm8.com/']
+    start_urls = ['https://www.rosmm8.com/rosimm/']
 
     def parse(self, response):
         nextPage = response.xpath('//script/text()').re(r'\w+\d+\.\w+')[-2:-1]  # 下一页主题链接
